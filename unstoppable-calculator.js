@@ -45,14 +45,15 @@ function calculate(){
   if(!isNaN(normal) && !isNaN(expanded)) {
   $('input[id="2yrs"]').val(subtotal);
   $('input[id="2yrs-total"]').val(twoyears);
-  $('input[id="unstoppable-commitment"]').val(commitment);
-  $('input[id="ctl00_main_ctl23_ctl01_ctl06_tbTotalAmount"]').val(commitment);
-  $('input[id="ctl00_main_ctl09_ctl01_ctl00_tbTotalAmount"]').val(commitment);
+  $('#unstoppable-commitment').html('$' + commitment);
+  $('input[id="ctl00_main_ctl23_ctl02_ctl06_tbTotalAmount"]').val(commitment);
+  $('input[id="ctl00_main_ctl09_ctl02_ctl00_tbTotalAmount"]').val(commitment);
   }
   else {
   	$('input[id="2yrs"]').val("");
   	$('input[id="2yrs-total"]').val("");
-  	$('input[id="ctl00_main_ctl23_ctl01_ctl06_tbTotalAmount"]').val("");
-  	$('input[id="ctl00_main_ctl09_ctl01_ctl00_tbTotalAmount"]').val("");
+  	$('#unstoppable-commitment').html("");
+  	$('input[id="ctl00_main_ctl23_ctl02_ctl06_tbTotalAmount"]').val("");
+  	$('input[id="ctl00_main_ctl09_ctl02_ctl00_tbTotalAmount"]').val("");
   }
 }
